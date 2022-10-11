@@ -1,98 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Recipe Blog</title>
-        <meta charset="UTF-8">
-        <style>
-            h1 {
-                color: aliceblue;
-                text-align: center;
-                background-image: url(cookingBanner.jpg);
-                padding: 50px;
-            }
-            
-            h3 { 
-                padding-left: 25px;
-                padding-right: 25px;
-                padding-top: 10px;
-            }
-            
-            p {
-                color: darkgoldenrod;
-            }
-            
-            .recipe {
-                color: darkgoldenrod;
-                font-weight: bold;
-                font-size: 16pt;
-            }
-            
-            ul {
-                list-style: none;
-                background-color: #868686;
-                margin: 0px auto;
-                padding: 10px 0px;
-                width: auto;
-                text-align: center
-            }
-            li {
-                display: inline;
-                font-size: 19px;
-                padding: 10px 230px;
-                list-style: none;
-            }
-            ul li a {
-                    color: aliceblue;
-                text-align: center;
-                text-decoration: none;
-            }
-            ul li a:hover {
-                color: #ff946d;
-                font-weight: bold;
-            }
-            img {
-                padding-top: 10px;
-                padding-left: 115px;
-            }
-            .format {
-                    padding-left: 275px;
-            }
-            body {
-                background-color: #d4d4d4;
-            }
-            th {
-                margin: auto;
-            }
-        </style>
+        <title>Halloween E-Vite</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
     </head>
-
-    <body>
-        <br><h1>Welcome to Khalil's Family Recipe Blog!<br></h1><hr><br>
-        <h3 align="center" > Here I have three different recipes that I grew up eating that I love. The first recipe is my fathers <em class="recipe">Mac and Cheese</em> recipe that was passed down from his father. Second I will have my mother's <em class="recipe">Sweet Potato Crunch</em> recipe that we received from a family friend. The third and final meal is my grandmothers <em class="recipe">Collard Greens</em> recipe.</h3>
-        <br><br><br>
-        <ul>
-            <li><a href="recipe1.html">Mac and Cheese Recipe</a></li>
-            <li><a href="recipe2.html"> Sweet Potato Crunch Recipe</a></li>
-            <li><a href="recipe3.html"> Collard Greens Recipe</a></li>
-        </ul>
-        <table>
-            <tbody>
-                <tr>
-                    <th><a href="recipe1.html">
-                        <img src="macandcheese.jpg" height="500" width="400"></a></th>
-                    <th><a href="recipe2.html">
-                        <img src="sweetpotato.jpg" height="500" width="400" class="format"></a></th>
-                    <th><a href="recipe3.html">
-                        <img src="CollardGreens.jpg" height="500" width="400" class="format"></a></th>
-                </tr>
-            </tbody>
-        </table>
     
-    
+    <body class="black">
+        <h2>
+            <ul class="navbar">
+                <li><a href=#gifts>Gift Registry</a></li>
+                <li><a href=#RSVP>RSVP</a></li>
+            </ul>
+        </h2>
+        <img src="spiderweb.jpeg" class="backgroundwebs">
+        <img src="cat.gif" class="cat">
+        <h1 id="container"> You're Invited to Khalil's Haunted Halloween Party!!
+            <p>There will be Drinks, Candy, Music, Party Games and More!</p>
+            <a id="clicker" href="#">Click Here For a Surprise</a>
+        </h1> 
+        <script src="sketch.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+        <a id="clicker" href="#">Click Here For a Surprise</a>
+        <script>
+            let clickerButton = document.getElementById("clicker");
+            let onButtonClick = function() {
+                clickerButton.innerHTML = "Boo!! You've Been Spooked!"
+                imgNode.src = "ghost.png";
+            }
+            clickerButton.addEventListener("click", onButtonClick);
+        
+        
+        
+        </script>
+        
     </body>
-
-
-
-
 
 </html>

@@ -1,0 +1,82 @@
+.navbar {
+    background-color: #4a4a4a;
+    padding:20px;
+    list-style: none;
+    margin: 20px;
+    margin-bottom: -10px;
+    color: #ffa500;
+    text-align: center;
+}
+.navbar li{
+    display: inline;
+    padding-right: 69px;
+}
+.navbar a {
+    color: #ffa500;
+    text-decoration: none;
+    z-index: 1px;
+}
+.navbar a:hover {
+    color: aliceblue;
+    text-decoration: none;
+    background-color: #5802a8;
+    padding: 25px;
+}
+#container{
+    border: 3px solid #ffa500;
+    width: 62.7%;
+    height 11px;
+    margin: 0px;
+    overflow: hidden;
+    background-color: #4a4a4a;
+    float: right;
+    margin-right: 20px;
+    padding-top: 291px;
+    padding-bottom: 291px;
+    text-align: center;
+    color: floralwhite;
+    position: absolute;
+    z-index: 0;
+    top: 87px;
+    right: 8px;
+}
+.backgroundwebs {
+    width: 700px;
+    height: 700px;
+    z-index: -2;
+    padding-left: 20px;
+    margin-top: -10px;
+    overflow: hidden;
+}
+.cat {
+    position: absolute;
+    top: -190px;
+    left: 400px;
+    transform: scale(.15);
+    z-index: -1px;
+}
+.black {
+    background-color: black;
+}
+
+p {
+    font-size: 24px;
+    font-weight: normal;
+    z-index: 2;
+}
+
+canvas {
+    position: absolute;
+    top: 434px;
+    right: -19px;
+    float: right;
+    transform:scale(.75);
+    z-index: 1;
+}
+.clicker {
+    font-size: 12px;
+    text-decoration: none;
+    color: #ffa500;
+}
+
+
