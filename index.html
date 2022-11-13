@@ -1,92 +1,248 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Recipe Blog</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <style>
-            h1 {
-                color: aliceblue;
+            #container {
+                background-color: #7e7e7e;
+                color: white;
+                width: 55%;
+                height: 75%;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                padding-left: 30px;
+                overflow: hidden;
+            }
+            .pictures{
+                object-fit: cover;
+                width: 90%;
+                height: 85%;
+            }
+            button {
+                width: 45%;
+                height: 40%;
+                margin: 20px;
+                border: solid black;
+                background-color: #bababa;
+                cursor: pointer;
+                padding: 5px;
+
+            }
+            #Spot1{}
+            #S1words{}
+            #Spot2{}
+            #S2words{}
+            #Spot3{}
+            #S3words{}
+            #Spot4{}
+            #S4words{}
+            #title {
                 text-align: center;
-                background-image: url(cookingBanner.jpg);
-                padding: 50px;
-            }
-            
-            h3 { 
-                padding-left: 25px;
-                padding-right: 25px;
                 padding-top: 10px;
-            }
-            
-            p {
-                color: darkgoldenrod;
-            }
-            
-            .recipe {
-                color: darkgoldenrod;
-                font-weight: bold;
-                font-size: 16pt;
-            }
-            
-            ul {
-                list-style: none;
-                background-color: #868686;
-                margin: 0px auto;
-                padding: 10px 0px;
-                width: auto;
-                text-align: center
-            }
-            li {
-                display: inline;
-                font-size: 19px;
-                padding: 10px 230px;
-                list-style: none;
-            }
-            ul li a {
-                    color: aliceblue;
-                text-align: center;
-                text-decoration: none;
-            }
-            ul li a:hover {
-                color: #ff946d;
-                font-weight: bold;
-            }
-            img {
-                padding-top: 10px;
-                padding-left: 115px;
-            }
-            .format {
-                    padding-left: 275px;
+                color: white;
+                font-size: 36px; 
             }
             body {
-                background-color: #d4d4d4;
+                background-color: #bababa
             }
-            th {
-                margin: auto;
+            h3{
+                color: black;
+                font-size: 20px;
             }
+            .finalfire{
+                
+            }
+        
         </style>
     </head>
-
     <body>
-        <br><h1>Welcome to Khalil's Family Recipe Blog!<br></h1><hr><br>
-        <h3 align="center" > Here I have three different recipes that I grew up eating that I love. The first recipe is my fathers <em class="recipe">Mac and Cheese</em> recipe that was passed down from his father. Second I will have my mother's <em class="recipe">Sweet Potato Crunch</em> recipe that we received from a family friend. The third and final meal is my grandmothers <em class="recipe">Collard Greens</em> recipe.</h3>
-        <br><br><br>
-        <ul>
-            <li><a href="recipe1.html">Mac and Cheese Recipe</a></li>
-            <li><a href="recipe2.html"> Sweet Potato Crunch Recipe</a></li>
-            <li><a href="recipe3.html"> Collard Greens Recipe</a></li>
-        </ul>
-        <table>
-            <tbody>
-                <tr>
-                    <th><a href="recipe1.html">
-                        <img src="macandcheese.jpg" height="500" width="400"></a></th>
-                    <th><a href="recipe2.html">
-                        <img src="sweetpotato.jpg" height="500" width="400" class="format"></a></th>
-                    <th><a href="recipe3.html">
-                        <img src="CollardGreens.jpg" height="500" width="400" class="format"></a></th>
-                </tr>
-            </tbody>
-        </table>
+        <h2 div id="title">Which Element Are You Quiz</h2>
+        <div id="container">
+            <h1> Question 1: Which is your favorite season?</h1>
+            <hr>
+            <button><img id="Spot1" class="pictures" src="winter.jpeg"><h3 id="S1words">Winter</h3></button> 
+            <button id = "button2"><img id="Spot2" src="summer.jpeg" class="pictures"><h3 id="S2words">Summer</h3></button>
+            <button id = "button3"><img id="Spot3" class="pictures" src="fall.jpeg"><h3 id="S3words">Fall</h3></button>
+            <button id = "button4"><img id="Spot4" src="spring.jpeg" class="pictures"><h3 id="S4words">Spring</h3></button>
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+            <script>
+                let x = 0;
+               ///let newDiv = $("<div>")
+                let position1 = $("#Spot1");
+                let position2 = $("#Spot2");
+                let position3 = $("#Spot3");
+                let position4 = $("#Spot4");
+                let p1words = $("#S1words");
+                let p2words = $("#S2words");
+                let p3words = $("#S3words");
+                let p4words = $("#S4words");
+                //p1=fire p2=water p3=earth p4=air
+                
+                $("#button2").on("click" , function(){
+                    x = x + 1
+                });
+                $("#button3").on("click" , function(){
+                    x = x + 2
+                });
+                $("#button4").on("click" , function(){
+                    x = x + 3
+                });
+ 
+
+                let scene2 = function(){
+                    $("h1").text("Question 2: Which sport do you enjoy the most?");
+                    $("#Spot1").attr("src", "basketball.jpeg" );
+                    $("#S1words").text("Basketball");
+                    $("#Spot2").attr("src", "swimming.jpeg");
+                    $("#S2words").text("Swimming");
+                    $("#Spot3").attr("src", "baseball.jpeg" );
+                    $("#S3words").text("Baseball");
+                    $("#Spot4").attr("src", "soccer.jpeg" );
+                    $("#S4words").text("Soccer");
+                    $("button").on("click", scene3);
+                }
+                
+                let scene3 = function(){
+                    $("h1").text("Question 3: Which superpower do you want?");
+                    $("#Spot1").attr("src", "speed.jpeg" );
+                    $("#S1words").text("Super Speed");
+                    $("#Spot2").attr("src", "healing.jpeg");
+                    $("#S2words").text("Healing");
+                    $("#Spot3").attr("src", "strong.jpeg" );
+                    $("#S3words").text("Super Strength");
+                    $("#Spot4").attr("src", "invisible.jpeg" );
+                    $("#S4words").text("Invisibility");
+                    $("button").on("click", scene4);
+                }
+                 
+                let scene4 = function(){
+                    $("h1").text("Question 4: Where would you rather explore?");
+                    $("#Spot1").attr("src", "city.jpeg" );
+                    $("#S1words").text("City");
+                    $("#Spot2").attr("src", "beach.jpeg");
+                    $("#S2words").text("Beach");
+                    $("#Spot3").attr("src", "forest.jpg" );
+                    $("#S3words").text("Forest");
+                    $("#Spot4").attr("src", "mountain.jpeg" );
+                    $("#S4words").text("Mountain");
+                    $("button").on("click", scene5);
+                }
+                
+                let scene5 = function(){
+                    $("h1").text("Question 5: Which color do you like most?");
+                    $("#Spot1").attr("src", "red.jpeg" );
+                    $("#S1words").text("Red");
+                    $("#Spot2").attr("src", "blue.png");
+                    $("#S2words").text("Blue");
+                    $("#Spot3").attr("src", "green.jpeg" );
+                    $("#S3words").text("Green");
+                    $("#Spot4").attr("src", "yellow.png" );
+                    $("#S4words").text("Yellow");
+                    $("button").on("click", scene6);
+                }
+                
+                let scene6 = function(){
+                    $("h1").text("Question 6: Which genre do you like the most?");
+                    $("#Spot1").attr("src", "horror.jpeg" );
+                    $("#S1words").text("Horror");
+                    $("#Spot2").attr("src", "romance.png");
+                    $("#S2words").text("Romance");
+                    $("#Spot3").attr("src", "action.jpeg" );
+                    $("#S3words").text("Action");
+                    $("#Spot4").attr("src", "fantasy.jpeg" );
+                    $("#S4words").text("Fantasy");
+                    $("button").on("click", scene7);
+                }
+                
+                let scene7 = function(){
+                    $("h1").text("Question 7: Which pet do you want?");
+                    $("#Spot1").attr("src", "bird.png" );
+                    $("#S1words").text("Bird");
+                    $("#Spot2").attr("src", "fish.jpeg");
+                    $("#S2words").text("Fish");
+                    $("#Spot3").attr("src", "dog.jpeg" );
+                    $("#S3words").text("Dog");
+                    $("#Spot4").attr("src", "cat.jpeg" );
+                    $("#S4words").text("Cat");
+                    $("button").on("click", scene8);
+                }
+                
+                let scene8 = function(){
+                    $("h1").text("Question 8: Which holiday is your favorite?");
+                    $("#Spot1").attr("src", "newyears.png" );
+                    $("#S1words").text("New Years");
+                    $("#Spot2").attr("src", "christmas.jpeg");
+                    $("#S2words").text("Christmas");
+                    $("#Spot3").attr("src", "halloween.jpeg" );
+                    $("#S3words").text("Halloween");
+                    $("#Spot4").attr("src", "valentines.jpeg" );
+                    $("#S4words").text("Valentine's Day");
+                    $("button").on("click", scene9);
+                }
+                
+                let scene9 = function(){
+                    $("h1").text("Question 9: Which natural disaster best desribes you");
+                    $("#Spot1").attr("src", "heatwave.jpeg" );
+                    $("#S1words").text("Heatwave");
+                    $("#Spot2").attr("src", "tsunami.jpeg");
+                    $("#S2words").text("Tsunami");
+                    $("#Spot3").attr("src", "sinkhole.jpeg" );
+                    $("#S3words").text("Sinkhole");
+                    $("#Spot4").attr("src", "tornado.jpeg" );
+                    $("#S4words").text("Tornado");
+                    $("button").on("click", scene10);
+                }
+                
+                let scene10 = function(){
+                    $("h1").text("Question 10: Which drink do you prefer?");
+                    $("#Spot1").attr("src", "soda.jpeg" );
+                    $("#S1words").text("Soda");
+                    $("#Spot2").attr("src", "juice.jpeg");
+                    $("#S2words").text("Juice");
+                    $("#Spot3").attr("src", "tea.jpeg" );
+                    $("#S3words").text("Tea");
+                    $("#Spot4").attr("src", "water.jpeg" );
+                    $("#S4words").text("Water");
+                    $("button").on("click", scene11);
+                }                
+                
+                let scene11 = function(){
+                    if (x < 7) {
+                        $("h1").text("Your Element is ... FIRE!!");
+                        $(".pictures").attr("src", "fire.jpeg");
+                        //$("#container").prepend('<img>' , {src: "fire.jpeg"});
+                        $("h3").empty();
+                    } else if (x < 14) {
+                        $("h1").text("Your Element is ... WATER!!");
+                        $(".pictures").attr("src", "aqua.png");
+                        $("h3").empty();
+                    } else if (x < 21) {
+                        $("h1").text("Your Element is ... EARTH!!");
+                        $(".pictures").attr("src", "earth.jpeg");
+                        $("h3").empty();
+                    } else {
+                        $("h1").text("Your Element is ... AIR!!");
+                        $(".pictures").attr("src", "air.jpeg");
+                        $("h3").empty();
+                        
+                    }    
+                }                
+                
+                 $("button").on("click", scene2);  
+   
+            </script>
+        
+        
+        
+        
+        
+        </div>
+    
+    
     
     
     </body>
